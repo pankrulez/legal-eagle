@@ -10,6 +10,8 @@ from groq import Groq
 # --- CONFIGURATION ---
 # 🔴 PASTE YOUR API KEY HERE 🔴
 api_key = st.secrets["GROQ_API_KEY"]
+db_path = st.secrets["DB_PATH"]
+
 client = Groq(api_key=api_key)
 
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

@@ -100,7 +100,7 @@ if prompt := st.chat_input("Ask a question about the contract..."):
                 """
                 
                 # C. Call LLM
-                client = Groq(api_key=GROQ_API_KEY)
+                client = Groq(api_key=api_key)
                 stream = client.chat.completions.create(
                     messages=[
                         {"role": "system", "content": system_prompt},

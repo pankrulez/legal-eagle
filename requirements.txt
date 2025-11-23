@@ -1,6 +1,7 @@
 streamlit
 langchain-huggingface
 langchain-chroma
+langchain_community
 groq
 sentence-transformers
 chromadb

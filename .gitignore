@@ -1,0 +1,41 @@
+--- Python Basics ---
+
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+--- Environment Variables & Secrets (CRITICAL) ---
+
+.env
+.streamlit/secrets.toml
+secrets.toml
+
+--- Data & Vector Databases ---
+
+Ignore the actual PDF files
+
+data/*
+!data/.gitkeep
+
+Ignore the local ChromaDB database folders (Binary data)
+
+chroma_db/
+chroma_db_app/
+
+--- IDE Settings ---
+
+.vscode/
+.idea/
+*.swp
+
+--- OS Generated ---
+
+.DS_Store
+Thumbs.db

@@ -72,7 +72,7 @@ Open `app.py` and paste your Groq API key:
 `GROQ_API_KEY = "gsk_..."`
 
 
-⚡ Usage
+## ⚡ Usage
 
 Run the App:
 ```

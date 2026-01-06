@@ -1,37 +1,37 @@
 # ⚖️ Legal Eagle: AI-Powered Contract Assistant
 
-Legal Eagle is a Retrieval-Augmented Generation (RAG) application designed to analyze complex legal documents. It allows users to upload PDF contracts and ask natural language questions, retrieving precise clauses and generating expert-level summaries using Llama-3.
+Legal Eagle is a **Retrieval-Augmented Generation (RAG)** application designed to analyze complex legal documents. It allows users to upload PDF contracts and ask natural language questions, retrieving precise clauses and generating expert-level summaries using Llama-3.
 
 ![Legal Eagle Dashboard](assets/dashboard.png)
 
 ### 🧠 How It Works (The RAG Pipeline)
 
-- Ingestion: The app reads the uploaded PDF and splits text into semantic chunks (recursive character splitting).
+- **Ingestion**: The app reads the uploaded PDF and splits text into semantic chunks (recursive character splitting).
 
-- Embedding: It uses all-MiniLM-L6-v2 to convert text chunks into dense vector embeddings.
+- **Embedding**: It uses all-MiniLM-L6-v2 to convert text chunks into dense vector embeddings.
 
-- Storage: Embeddings are stored locally in ChromaDB, a high-performance vector database.
+- **Storage**: Embeddings are stored locally in ChromaDB, a high-performance vector database.
 
-- Retrieval: When a user asks a question, the system performs a semantic similarity search to find the top 3 most relevant contract clauses.
+- **Retrieval**: When a user asks a question, the system performs a semantic similarity search to find the top 3 most relevant contract clauses.
 
-- Generation: These clauses are fed into Llama-3.1-8b (via Groq), which answers the question based strictly on the provided context.
+- **Generation**: These clauses are fed into Llama-3.1-8b (via Groq), which answers the question based strictly on the provided context.
 
 ### 🛠️ Tech Stack
 
-- LLM Engine: Llama-3.1-8b (via Groq API)
+- **LLM Engine**: Llama-3.1-8b (via Groq API)
 
-- Vector Database: ChromaDB
+- **Vector Database**: ChromaDB
 
-- Orchestration: LangChain
+- **Orchestration**: LangChain
 
-- Embeddings: Sentence-Transformers (HuggingFace)
+- **Embeddings**: Sentence-Transformers (HuggingFace)
 
-- Frontend: Streamlit
+- **Frontend**: Streamlit
 
-- Language: Python 3.10+
+- **Language**: Python 3.10+
 
 ### 📂 Project Structure
-
+```
 legal-eagle/
 
 ├── app.py               # The main Streamlit application
@@ -43,27 +43,27 @@ legal-eagle/
 ├── requirements.txt     # Python dependencies
 
 └── README.md            # Documentation
-
+```
 
 ### 🚀 Setup & Installation
 
 **Prerequisites**
 
-- Python 3.10 or higher installed.
-
-- A free Groq API Key.
+  - Python 3.10 or higher installed.
+  
+  - A free Groq API Key.
 
 1. Clone the Repository
-
+```
 git clone [https://github.com/yourusername/legal-eagle.git](https://github.com/yourusername/legal-eagle.git)
 
-`cd legal-eagle`
-
+cd legal-eagle
+```
 
 2. Install Dependencies
-
-`pip install streamlit langchain langchain-community langchain-chroma langchain-huggingface pypdf chromadb groq sentence-transformers`
-
+```
+pip install streamlit langchain langchain-community langchain-chroma langchain-huggingface pypdf chromadb groq sentence-transformers
+```
 
 3. Configure API Key
 
@@ -75,21 +75,21 @@ Open `app.py` and paste your Groq API key:
 ⚡ Usage
 
 Run the App:
+```
+streamlit run app.py
+```
 
-`streamlit run app.py`
+**Upload**: Use the sidebar to upload a PDF contract (e.g., NDA, Lease).
 
+**Process**: Click "Process Document" to build the vector database.
 
-Upload: Use the sidebar to upload a PDF contract (e.g., NDA, Lease).
+**Chat**: Ask questions like:
 
-Process: Click "Process Document" to build the vector database.
+- "What is the termination notice period?"
 
-Chat: Ask questions like:
+- "Who is liable for water damage?"
 
-"What is the termination notice period?"
-
-"Who is liable for water damage?"
-
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 [ ] Multi-File Support: Allow chatting with multiple PDFs simultaneously.
 
@@ -97,6 +97,6 @@ Chat: Ask questions like:
 
 [ ] Chat History: Save session history to a database.
 
-📄 License
+## 📄 License
 
 MIT
